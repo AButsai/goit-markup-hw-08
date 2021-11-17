@@ -1,0 +1,48 @@
+.client__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  @media screen and (max-width: 479px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.client__item {
+  max-width: 210px;
+  padding: 16px 52px;
+  margin: 15px;
+  border: 1px solid $border-client;
+  border-radius: 4px;
+  outline: none;
+  color: $border-client;
+
+  &:focus-within,
+  &:hover {
+    border: 1px solid $color-primary-blue;
+    color: $color-primary-blue;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 226px;
+    padding: 16px 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 170px;
+    padding: 16px 32px;
+  }
+}
+
+.client__link {
+  color: inherit;
+  outline: none;
+}
+
+.client__icon {
+  fill: currentColor;
+}

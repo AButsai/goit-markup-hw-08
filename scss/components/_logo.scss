@@ -1,0 +1,27 @@
+.logo {
+  display: inline-block;
+  font-family: $font-family-additional;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $color-primary;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+  }
+}
+
+.logo__span {
+  color: $color-primary-blue;
+}
+
+.logo--for-header {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.logo--for-footer {
+  color: $color-white;
+  margin-bottom: 20px;
+}

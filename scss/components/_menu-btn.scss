@@ -1,0 +1,42 @@
+.menu__button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  z-index: 10;
+
+  transition: opacity $duration $timing-function,
+    color $duration $timing-function;
+
+  &:focus,
+  &:hover {
+    color: $color-primary-blue;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu__button .menu__close {
+  opacity: 0;
+}
+
+.menu__button.is-open .menu__close {
+  opacity: 1;
+}
+
+.menu__button.is-open .menu__open {
+  opacity: 0;
+}
+
+.menu__close,
+.menu__open {
+  fill: currentColor;
+}
