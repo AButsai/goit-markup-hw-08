@@ -41,7 +41,6 @@ body {
   background-color: #ffffff;
 }
 
-body.modal-open,
 body.menu-open {
   overflow: hidden;
 }
