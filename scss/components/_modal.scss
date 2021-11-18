@@ -10,7 +10,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 93px 15px 94px 15px;
+  padding: 93px 15px 93px 15px;
   background: $bg-color-overlay;
 
   visibility: visible;
@@ -22,14 +22,16 @@
 
   overflow-y: scroll;
 
+  @media screen and (max-width: 769px) {
+  }
+
   @media screen and (min-width: 768px) {
-    padding: 0;
+    // padding: 0;
   }
 }
 
 .modal {
   position: relative;
-
   padding: 40px;
 
   background-color: $color-white;
@@ -37,9 +39,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (max-width: 767px) {
-    max-width: 450px;
-  }
+  // @media (orientation: landscape) {
+  //   top: 310px;
+  // }
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -52,194 +54,5 @@
 
   @media screen and (min-width: 1200px) {
     width: 528px;
-  }
-}
-
-// modal btn
-.modal__close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: transparent;
-  color: $color-black;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  outline: none;
-
-  transition: color $duration $timing-function;
-
-  &:hover,
-  &:focus {
-    color: $color-primary-blue;
-  }
-}
-
-.modal__close-icon {
-  fill: currentColor;
-}
-
-/* Форма */
-
-.modal__title {
-  font-size: 20px;
-  line-height: 1.5;
-
-  margin-bottom: 12px;
-
-  color: $color-primary;
-}
-
-.modal__inputs {
-  font-size: 14px;
-  line-height: 2;
-
-  margin-bottom: 20px;
-}
-
-.modal__field {
-  position: relative;
-
-  color: $color-primary;
-
-  transition: color $duration $timing-function;
-}
-
-.modal__field {
-  margin-bottom: 10px;
-}
-
-.modal__field:last-child {
-  margin-bottom: 0;
-}
-
-.modal__label {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-
-  &:hover,
-  &:focus-within {
-    color: $color-primary-blue;
-  }
-}
-
-.modal__text {
-  display: block;
-  margin-bottom: 4px;
-
-  font-size: 12px;
-  line-height: 1.2;
-
-  color: $color-text;
-}
-
-.modal__wrap {
-  position: relative;
-}
-
-.modal__input {
-  border: 1px solid $color-border-inputs;
-  border-radius: 4px;
-
-  transition: border $duration $timing-function,
-    filter $duration $timing-function;
-}
-
-.modal__input {
-  width: 100%;
-  padding: 11px 12px 11px 42px;
-  outline: none;
-
-  &:focus,
-  &:hover {
-    border: 1px solid $color-primary-blue;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 4px;
-  }
-}
-
-.modal__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-
-  transform: translateY(-50%);
-
-  fill: currentColor;
-}
-
-.modal__textarea {
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-
-  padding: 12px 16px;
-
-  color: $color-textarea;
-
-  resize: none;
-}
-
-/* Чек-бокс */
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.checkbox__icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z' fill='%23212121'/%3E%3C/svg%3E");
-
-  transition: background-image $duration $timing-function,
-    background-color $duration $timing-function,
-    transform $duration $timing-function;
-
-  border-radius: 2px;
-}
-
-.checkbox__input {
-  &:checked + .checkbox__icon {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
-    background-color: $color-primary-blue;
-  }
-
-  &:focus + .checkbox__icon,
-  &:hover + .checkbox__icon {
-    transform: scale(1.1);
-  }
-}
-
-.checkbox__text {
-  font-size: 12px;
-  line-height: 1.15;
-
-  color: $color-text;
-}
-
-.checkbox__link {
-  color: $color-primary-blue;
-
-  transition: outline $duration $timing-function;
-
-  outline: none;
-
-  &:focus-within {
-    outline: 1px solid $color-primary-blue;
-    border-radius: 4px;
   }
 }
