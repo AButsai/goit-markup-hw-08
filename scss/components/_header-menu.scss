@@ -162,9 +162,13 @@
 
 .nav__link--phone {
   @media screen and (max-width: 767px) {
-    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 26) + 26px);
+    font-size: 34px;
     line-height: 1.2;
     color: $color-primary-blue;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 26) + 26px);
   }
 }
 

@@ -444,9 +444,15 @@ body.menu-open {
 
 @media screen and (max-width: 767px) {
   .nav__link--phone {
-    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 26) + 26px);
+    font-size: 34px;
     line-height: 1.2;
     color: #2196f3;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .nav__link--phone {
+    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 26) + 26px);
   }
 }
 
@@ -490,7 +496,15 @@ body.menu-open {
 }
 
 .header-social__link {
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (max-width: 479px) {
+  .header-social__link {
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 10) + 10px);
+  }
 }
 
 .menu__button {

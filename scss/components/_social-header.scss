@@ -22,5 +22,12 @@
 }
 
 .header-social__link {
+  // font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   color: $color-primary-blue;
+
+  @media screen and (max-width: 479px) {
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 10) + 10px);
+  }
 }
