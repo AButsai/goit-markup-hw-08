@@ -190,6 +190,36 @@ body.menu-open {
   }
 }
 
+.logo {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
+
+.logo__span {
+  color: #2196f3;
+}
+
+.logo--for-header {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.logo--for-footer {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
 .header__menu {
   display: none;
   font-weight: 500;
@@ -217,6 +247,7 @@ body.menu-open {
     height: 100vh;
     padding: 40px 48px;
     z-index: 2;
+    overflow-y: scroll;
   }
 }
 
@@ -460,36 +491,6 @@ body.menu-open {
 
 .header-social__link {
   color: #2196f3;
-}
-
-.logo {
-  display: inline-block;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-@media screen and (min-width: 1200px) {
-  .logo {
-    font-size: 26px;
-  }
-}
-
-.logo__span {
-  color: #2196f3;
-}
-
-.logo--for-header {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.logo--for-footer {
-  color: #ffffff;
-  margin-bottom: 20px;
 }
 
 .menu__button {
