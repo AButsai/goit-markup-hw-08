@@ -1,5 +1,5 @@
 .section__hero {
-  max-width: 480px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -27,9 +27,7 @@
       url('../images/mobile/hero-bg-img@2x.jpg');
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-
+  @media screen and (min-width: 481px) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -49,7 +47,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 769px) {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -85,7 +83,7 @@
   text-transform: uppercase;
 
   @media screen and (min-width: 1200px) {
-    min-width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.4;
   }

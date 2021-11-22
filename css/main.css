@@ -1,7 +1,3 @@
-* {
-  outline: none;
-}
-
 h1,
 h2,
 h3,
@@ -16,6 +12,7 @@ ul {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 img {
@@ -172,22 +169,20 @@ body.menu-open {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .header__wrap {
-  position: relative;
-}
-
-@media screen and (min-width: 768px) {
-  .header__wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo {
@@ -304,6 +299,10 @@ body.menu-open {
   .nav__item {
     margin-right: 50px;
   }
+}
+
+.nav__item--last {
+  margin-right: 0;
 }
 
 .nav__link {
@@ -508,11 +507,6 @@ body.menu-open {
 }
 
 .menu__button {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 44px;
   height: 44px;
   margin: 0;
@@ -552,7 +546,7 @@ body.menu-open {
 }
 
 .section__hero {
-  max-width: 480px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -573,22 +567,21 @@ body.menu-open {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   .section__hero {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/hero-bg-img.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero-bg-img.jpg");
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .section__hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet/hero-bg-img@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero-bg-img@2x.jpg");
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   .section__hero {
     max-width: 1600px;
     padding-top: 200px;
@@ -598,7 +591,7 @@ body.menu-open {
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .section__hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/desctop/hero-bg-img@2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desctop/hero-bg-img@2x.jpg");
@@ -618,7 +611,7 @@ body.menu-open {
 
 @media screen and (min-width: 1200px) {
   .hero__title {
-    min-width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.4;
   }
@@ -648,6 +641,7 @@ body.menu-open {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  outline: none;
 }
 
 .btn--form {
@@ -1099,6 +1093,7 @@ body.menu-open {
 .team__wrap {
   padding-top: 30px;
   padding-bottom: 24px;
+  background-color: #ffffff;
 }
 
 .team__title {
@@ -1131,13 +1126,6 @@ body.menu-open {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
   }
 }
 
@@ -1241,6 +1229,7 @@ body.menu-open {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -1261,6 +1250,9 @@ body.menu-open {
 
 @media screen and (min-width: 768px) {
   .portfolio__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     max-width: 354px;
     margin-bottom: 0;
     margin: 15px;
@@ -1297,6 +1289,13 @@ body.menu-open {
 
 @media screen and (min-width: 768px) {
   .potfolio__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 354px;
   }
 }
@@ -1310,6 +1309,12 @@ body.menu-open {
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.potfolio__img {
+  height: 294px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio__overlay {
@@ -1341,10 +1346,13 @@ body.menu-open {
   text-align: left;
   border: 1px solid #eeeeee;
   border-top: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .portfolio__title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -1354,20 +1362,8 @@ body.menu-open {
 
 .portfolio__text {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.85;
   color: #757575;
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio__text--padding {
-    margin-bottom: 36px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio__text--padding {
-    margin-bottom: 0;
-  }
 }
 
 .footer {
@@ -1450,9 +1446,10 @@ body.menu-open {
 
 .footer__title {
   display: inline-block;
+  font-weight: bold;
   line-height: 1.15;
-  text-transform: uppercase;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
