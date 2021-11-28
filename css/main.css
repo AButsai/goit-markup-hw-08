@@ -723,6 +723,12 @@ body::-webkit-scrollbar {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    padding: 40px 10px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal {
     width: 450px;
